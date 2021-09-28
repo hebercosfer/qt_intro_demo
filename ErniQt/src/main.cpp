@@ -6,7 +6,6 @@ int main(int argc, char **argv)
 {
     QApplication app (argc, argv);
 
-
     CalculationController calcController;
     Window window(calcController.getCalculationModel());
     window.show();

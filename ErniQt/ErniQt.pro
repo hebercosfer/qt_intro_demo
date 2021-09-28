@@ -15,3 +15,20 @@ HEADERS += \
     inc/calculationcontroller.h \
     inc/calculationmodel.h \
     inc/window.h
+
+DISTFILES += \
+    doc/basicclassdiagram.qmodel
+
+CONFIG -= debug_and_release debug_and_release_target
+CONFIG(debug, debug|release) {
+    BUILDDIR = build/debug
+} else {
+    BUILDDIR = build/release
+}
+
+DESTDIR = $${BUILDDIR}/bin
+OBJECTS_DIR = $${BUILDDIR}/obj
+MOC_DIR = $${BUILDDIR}/moc
+RCC_DIR = $${BUILDDIR}/rcc
+UI_DIR = $${BUILDDIR}/ui
+MAKEFILE = $${BUILDDIR}/Makefile

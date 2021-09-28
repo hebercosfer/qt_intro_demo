@@ -19,7 +19,7 @@ signals:
     void secondValueChanged(int);
     void operatorChanged(char);
 
-public slots:
+private slots:
     void sendFirstValueChanged(const QString&);
     void sendSecondValueChanged(const QString&);
     void sendOperatorChanged(const QString&);

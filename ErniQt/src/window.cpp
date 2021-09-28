@@ -30,7 +30,7 @@ Window::Window(const CalculationModel& model, QWidget* parent)
 
     //connect(m_solveButton, &QPushButton::clicked, this, &Window::makeCalculation);
     connect(m_firstValueInput, &QLineEdit::textChanged, this, &Window::sendFirstValueChanged);
-    connect(m_secondValueInput, &QLineEdit::textChanged, this, &Window::sendSecondValueChanged);
+    connect(m_secondValueInput, &QLineEdit::textChanged, [this](const QString& text) {emit this->secondValueChanged(text.toInt());});
 
     connect(this, &Window::firstValueChanged, &model, &CalculationModel::setFirstValue);
     connect(this, &Window::secondValueChanged, &model, &CalculationModel::setSecondValue);
