@@ -1,6 +1,8 @@
 TEMPLATE = app
 TARGET = erni_qt
 
+CONFIG += c++11
+
 QT = core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -29,6 +31,5 @@ CONFIG(debug, debug|release) {
 DESTDIR = $${BUILDDIR}/bin
 OBJECTS_DIR = $${BUILDDIR}/obj
 MOC_DIR = $${BUILDDIR}/moc
-RCC_DIR = $${BUILDDIR}/rcc
 UI_DIR = $${BUILDDIR}/ui
 MAKEFILE = $${BUILDDIR}/Makefile
