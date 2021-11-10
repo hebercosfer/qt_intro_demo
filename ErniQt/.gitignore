@@ -1,7 +1,0 @@
-#Ignore Build folder
-**/build
-
-#Ignore Qt Creator files
-*.qmake.stash
-*.pro.user
-
